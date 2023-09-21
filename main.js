@@ -1,3 +1,5 @@
+const myLibrary = [];
+
 function Book(title, author, pages, isRead) {
   this.title = title;
   this.author = author;
@@ -8,6 +10,6 @@ function Book(title, author, pages, isRead) {
   };
 }
 
-let theHobbit = new Book("the hobbit", "me", 23, false);
+function addBookToLibrary() {}
 
-console.log(Object.prototype.hasOwnProperty("valueOf")); // true);
+let theHobbit = new Book("the hobbit", "me", 23, false);
