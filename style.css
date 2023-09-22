@@ -2,14 +2,25 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-:root {
-    --bg-header: gray;
-    --bg-content: #fafafa;
-    --bg-addbook: black;
+    font-family: "Poppins";
 }
 
-body {
+@font-face {
+    font-family: "Roboto";
+    src: url("./media/fonts/Roboto-Regular.ttf");
+    font-family: "Poppins";
+    src: url(./media/fonts/Poppins-Medium.ttf);
+}
+
+:root {
+    --bg-header: white;
+    --bg-content: #fafafa;
+    --bg-addbook: black;
+    --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+#book-dialog {
+    
 }
 
 .container {
@@ -19,10 +30,11 @@ body {
 
 }
 header {
-    padding: 50px;
-    text-align: center;
+    padding: 2rem;
     background-color: var(--bg-header);
-    
+    box-shadow: var(--shadow);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
 }
 
 #showDialog {
@@ -44,6 +56,7 @@ header {
 }
 
 .fa-github {
+    color: black;
     font-size: 24px;
     transition: transform 0.3s ease-in-out;
 }
@@ -58,5 +71,9 @@ footer {
     margin-top: auto;
     font-size: 20px;
     font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
