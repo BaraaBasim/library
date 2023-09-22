@@ -10,14 +10,18 @@ const myLibrary = [];
 
 // dialog.addEventListener("close", (e) => {});
 
-function Book(title, author, pages, isRead) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.isRead = isRead;
-  this.info = function () {
-    return [title, author, pages, isRead];
-  };
+class Book {
+  constructor(
+    title = "Unknown",
+    author = "Unknown",
+    pages = "0",
+    isRead = false
+  ) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.isRead = isRead;
+  }
 }
 
 // loop through the library and display the books cards
