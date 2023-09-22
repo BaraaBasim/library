@@ -1,14 +1,14 @@
 const showButton = document.getElementById("showDialog");
-const dialog = document.getElementById("book-dialog");
+// const dialog = document.getElementById("book-dialog");
 const submitButton = document.getElementById("submit");
 const formBook = document.getElementById("form-book");
 const myLibrary = [];
 
-showButton.addEventListener("click", () => {
-  dialog.showModal();
-});
+// showButton.addEventListener("click", () => {
+//   dialog.showModal();
+// });
 
-dialog.addEventListener("close", (e) => {});
+// dialog.addEventListener("close", (e) => {});
 
 function Book(title, author, pages, isRead) {
   this.title = title;
