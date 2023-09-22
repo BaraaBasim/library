@@ -9,7 +9,7 @@
     font-family: "Roboto";
     src: url("./media/fonts/Roboto-Regular.ttf");
     font-family: "Poppins";
-    src: url(./media/fonts/Poppins-Medium.ttf);
+    src: url("./media/fonts/Poppins-Medium.ttf");
 }
 
 :root {
@@ -19,16 +19,8 @@
     --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-#book-dialog {
-    
-}
 
-.container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-
-}
+/* Header */
 header {
     padding: 2rem;
     background-color: var(--bg-header);
@@ -37,12 +29,22 @@ header {
     font-size: 1.2rem;
 }
 
+
+
+/* Main content */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
 #showDialog {
     border: none;
     outline: none;
     font-size: 1.8rem;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     cursor: pointer;
     color: var(--white);
@@ -54,6 +56,9 @@ header {
     color: white;
     background-color: var(--bg-addbook);
 }
+
+
+/* footer */
 
 .fa-github {
     color: black;
