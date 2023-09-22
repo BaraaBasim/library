@@ -31,12 +31,6 @@ function displayBooks() {
   }
 }
 
-// function removeBook(book) {
-//   myLibrary.filter((item) => {
-//     item.title !== book.title;
-//   });
-// }
-
 function addBookToLibrary() {
   const title = document.getElementById("title").value;
   const author = document.getElementById("author").value;
