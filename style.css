@@ -89,6 +89,8 @@ header {
     background-color: var(--white);
     box-shadow: var(--shadow);
     line-height: 1.2;
+    text-align: center;
+    margin: var(--spacing-lg);
 }
 
 
