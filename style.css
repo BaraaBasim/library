@@ -1,3 +1,21 @@
+
+:root {
+    --bg-header: white;
+    --bg-content: #fafafa;
+    --bg-addbook: black;
+    --white: #fffbfb;
+    --grey: #f0eef1;
+    --black: #050505;
+    --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    --border-radius: 8px;
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 40px;
+}
+
+/* CSS reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,13 +28,6 @@
     src: url("./media/fonts/Roboto-Regular.ttf");
     font-family: "Poppins";
     src: url("./media/fonts/Poppins-Medium.ttf");
-}
-
-:root {
-    --bg-header: white;
-    --bg-content: #fafafa;
-    --bg-addbook: black;
-    --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 
@@ -39,7 +50,9 @@ header {
 
 }
 
-#showDialog {
+
+
+#showModal {
     border: none;
     outline: none;
     font-size: 1.8rem;
@@ -82,3 +95,23 @@ footer {
     gap: 10px;
 }
 
+
+/* MODALS */
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    background-color: var(--grey);
+    text-align: center;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.2s ease-in-out;
+  }
+  
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
