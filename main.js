@@ -93,6 +93,17 @@ const closeAddBookModal = () => {
   overlay.classList.remove("active");
 };
 
+const resetBooksGrid = () => {
+  booksGrid.innerHTML = "";
+};
+
+const updateBooksGrid = () => {
+  resetBooksGrid();
+  for (let book of library.books) {
+    createBookCard(book);
+  }
+};
+
 const addBook = (e) => {
   e.preventDefault();
   const newBook = getBookFromInput();
