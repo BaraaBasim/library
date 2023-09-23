@@ -93,6 +93,14 @@ const closeAddBookModal = () => {
   overlay.classList.remove("active");
 };
 
+const getBookFromInput = () => {
+  const title = document.getElementById("title").value;
+  const author = document.getElementById("author").value;
+  const pages = document.getElementById("pages").value;
+  const isRead = document.getElementById("isRead").checked;
+  return new Book(title, author, pages, isRead);
+};
+
 showModal.addEventListener("click", () => {
   openAddBookModal();
 });
