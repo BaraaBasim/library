@@ -59,8 +59,8 @@ const createBookCard = (book) => {
   buttonGroup.classList.add("button-group");
   readBtn.classList.add("btn");
   removeBtn.classList.add("btn");
-  //   readBtn.onclick = toggleRead;
-  //   removeBtn.onclick = removeBook;
+  readBtn.onclick = toggleRead;
+  removeBtn.onclick = removeBook;
 
   title.textContent = `"${book.title}"`;
   author.textContent = book.author;
@@ -82,6 +82,28 @@ const createBookCard = (book) => {
   buttonGroup.appendChild(removeBtn);
   bookCard.appendChild(buttonGroup);
   booksGrid.appendChild(bookCard);
+};
+
+const toggleRead = (e) => {
+  const title = e.target.parentNode.parentNode.firstChild.innerHTML.replaceAll(
+    '"',
+    ""
+  );
+  const book = library.getBook(title);
+
+  book.isRead = !book.isRead;
+  // saveLocal();
+  updateBooksGrid();
+};
+
+const removeBook = (e) => {
+  const title = e.target.parentNode.parentNode.firstChild.innerHTML.replaceAll(
+    '"',
+    ""
+  );
+  library.removeBook(title);
+  // saveLocal();
+  updateBooksGrid();
 };
 
 const openAddBookModal = () => {
