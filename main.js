@@ -93,6 +93,17 @@ const closeAddBookModal = () => {
   overlay.classList.remove("active");
 };
 
+const addBook = (e) => {
+  e.preventDefault();
+  const newBook = getBookFromInput();
+
+  library.addBook(newBook);
+  // saveLocal()
+  updateBooksGrid();
+
+  closeAddBookModal();
+};
+
 const getBookFromInput = () => {
   const title = document.getElementById("title").value;
   const author = document.getElementById("author").value;
