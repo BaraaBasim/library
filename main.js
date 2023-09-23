@@ -3,6 +3,7 @@ const modal = document.getElementById("modal");
 const submitButton = document.getElementById("submit");
 const formBook = document.getElementById("form-book");
 const overlay = document.getElementById("overlay");
+const booksGrid = document.querySelector(".book-cards");
 const myLibrary = [];
 
 class Book {
@@ -58,8 +59,8 @@ const createBookCard = (book) => {
   buttonGroup.classList.add("button-group");
   readBtn.classList.add("btn");
   removeBtn.classList.add("btn");
-  readBtn.onclick = toggleRead;
-  removeBtn.onclick = removeBook;
+  //   readBtn.onclick = toggleRead;
+  //   removeBtn.onclick = removeBook;
 
   title.textContent = `"${book.title}"`;
   author.textContent = book.author;
@@ -127,10 +128,7 @@ showModal.addEventListener("click", () => {
   openAddBookModal();
 });
 
-submitButton.addEventListener("click", (event) => {
-  event.preventDefault(); // We don't want to submit this fake form
+submitButton.addEventListener("click", (e) => {
+  addBook(e);
   closeAddBookModal();
 });
-
-let theHobbit = new Book("the hobbit", "me", 23, false);
-myLibrary.push(theHobbit);
