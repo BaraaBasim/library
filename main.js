@@ -1,12 +1,14 @@
-const showButton = document.getElementById("showDialog");
-// const dialog = document.getElementById("book-dialog");
+const showModal = document.getElementById("showModal");
+const modal = document.getElementById("modal");
 const submitButton = document.getElementById("submit");
 const formBook = document.getElementById("form-book");
+const overlay = document.getElementById("overlay");
 const myLibrary = [];
 
-// showButton.addEventListener("click", () => {
-//   dialog.showModal();
-// });
+const addBookModal = () => {
+  modal.classList.add("active");
+  overlay.classList.add("active");
+};
 
 // dialog.addEventListener("close", (e) => {});
 
