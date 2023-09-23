@@ -5,13 +5,6 @@ const formBook = document.getElementById("form-book");
 const overlay = document.getElementById("overlay");
 const myLibrary = [];
 
-const addBookModal = () => {
-  modal.classList.add("active");
-  overlay.classList.add("active");
-};
-
-// dialog.addEventListener("close", (e) => {});
-
 class Book {
   constructor(
     title = "Unknown",
@@ -25,6 +18,17 @@ class Book {
     this.isRead = isRead;
   }
 }
+
+const openAddBookModal = () => {
+  formBook.reset();
+  modal.classList.add("active");
+  overlay.classList.add("active");
+};
+
+const closeAddBookModal = () => {
+  modal.classList.remove("active");
+  overlay.classList.remove("active");
+};
 
 // loop through the library and display the books cards
 function displayBooks() {
