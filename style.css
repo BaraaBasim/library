@@ -4,6 +4,8 @@
     --bg-addbook: black;
     --white: #fffbfb;
     --grey: #f0eef1;
+    --light-green: #9fff9c;
+    --light-red: #ff9c9c;
     --black: #050505;
     --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     --border-radius: 8px;
@@ -164,6 +166,14 @@ footer {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+.btn-light-green {
+    background-color: var(--light-green);
+  }
+  
+  .btn-light-red {
+    background-color: var(--light-red);
+  }
 
 .overlay.active {
     display: block;
