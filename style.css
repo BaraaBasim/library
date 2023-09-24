@@ -94,7 +94,22 @@ header {
     margin: var(--spacing-lg);
 }
 
+.btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius);
+    transition: filter 0.15s ease-in-out;
+  }
+  
+  .btn:hover {
+    filter: brightness(90%);
+  }
+  
+  .btn-add {
+    font-size: 24px;
+    font-weight: 600;
+  }
 
+  
 #showModal {
     border: none;
     outline: none;
