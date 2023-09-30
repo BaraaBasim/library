@@ -1,2 +1,1 @@
 # library
-The odin library
